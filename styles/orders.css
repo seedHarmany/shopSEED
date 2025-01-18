@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+.container {
+  /* border: 1px solid black; */
+  max-width: 900px;
+  width: 100%;
+}
+
+.order-details {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid gainsboro;
+  padding: 1.3em;
+  display: grid;
+  grid-template-columns: 150px 100px 1fr;
+  margin-top: 2em;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.details span:first-child {
+  flex-shrink: 0;
+}
+
+.order-id {
+  margin-left: auto;
+}
+
+@media (max-width: 575px) {
+  .order-details {
+    grid-template-columns: auto;
+    padding: 1em;
+  }
+
+  .order-id {
+    margin: 0;
+  }
+
+  .details {
+    flex-direction: row;
+    margin-bottom: 4px;
+  }
+
+  .details span:last-child {
+    padding-left: 7px;
+  }
+}
+
+.order-product-container {
+  border: 1px solid gainsboro;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 2em;
+  display: flex;
+  align-items: start;
+}
+
+.img-container {
+  width: 110px;
+}
+
+.img-container .product-img {
+  height: 110px;
+  max-width: 100%;
+}
+
+.product-details-container {
+  padding-left: 2.4em;
+  display: flex;
+  align-items: start;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.product-details button {
+  border-radius: 7px;
+  border: 0;
+  padding: 7px;
+  /* width: 70%; */
+  color: white;
+}
+
+.track-package {
+  border: 1px solid gainsboro;
+  padding: 0.3em 3em;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-left: 2em;
+}
+
+@media (max-width: 768px) {
+  .product-details-container {
+    flex-direction: column;
+  }
+
+  .track-package {
+    margin-top: 7px;
+    margin-left: 0;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 450px) {
+  .order-details {
+    margin-top: 0;
+  }
+
+  .order-product-container {
+    flex-direction: column;
+  }
+
+  .product-details-container {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .img-container {
+    margin-bottom: 10px;
+  }
+
+  .img-container .product-img {
+    height: 150px;
+  }
+
+  .product-details button,
+  .track-package {
+    width: 100%;
+  }
+}

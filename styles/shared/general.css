@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial;
+}
+
+
+nav {
+  padding: 0.7em 1.3em;
+}
+
+.left-section {
+  margin-right: 1.5em;
+}
+
+.left-section .responsive-logo {
+  display: none;
+}
+
+.middle-section {
+  width: 65%;
+}
+
+.middle-section input {
+  width: 95%;
+  padding: 0.3em 0.7em;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.middle-section button {
+  padding: 0.3em 0.7em;
+  font-size: 1.2em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+}
+
+.right-section {
+  margin-left: 1.5em;
+  flex-shrink: 0;
+}
+
+.right-section .cart {
+  margin-left: 1em;
+  position: relative;
+}
+
+.cart .cart-quantity {
+  position: absolute;
+  bottom: 19px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: greenyellow;
+}
+
+.right-section .cart:hover{
+  border: 1px solid whitesmoke;
+  padding: 3px;
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .left-section .responsive-logo {
+    display: initial;
+  }
+
+  .left-section .logo {
+    display: none;
+  }
+
+  nav {
+    padding: 0.5em 0.5em;
+  }
+}
+
+/* End of navbar session */
+
+.text-to-2-lines{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
